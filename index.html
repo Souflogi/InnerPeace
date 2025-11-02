@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Fancy CSS</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__logo">
+        <img src="/images/logo-dark.png" width="70px" alt="" />
+      </div>
+      <nav class="site-header__nav">
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#home">Presence</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#impact">Quiet Impact</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#practice">Practice</a>
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#">Community / Stories</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="site-header__cta">Begin</a>
+    </header>
+    <main>
+      <section id="home" class="hero">
+        <div class="hero__content">
+          <h1>Find Your Center. Live With <span>Presence</span>.</h1>
+          <p>
+            Welcome to Inner Peace — a calm, modern studio for mindful practice.
+            Explore guided sessions, browse our community gallery, and discover
+            simple rituals that bring clarity into every day.
+          </p>
+          <div class="hero__friends">
+            <img src="./images/faces/face-1.jpg" width="40px" alt="" />
+            <img src="./images/faces/face-2.jpg" width="40px" alt="" />
+            <img src="./images/faces/face-3.jpg" width="40px" alt="" />
+            <img src="./images/faces/face-4.jpg" width="40px" alt="" />
+            <p><span>12K+</span> Active Friends</p>
+          </div>
+        </div>
+        <div class="hero__decor" aria-hidden="true">
+          <div class="gallery">
+            <div class="gallery__frame"></div>
+            <div class="gallery__item">
+              <img
+                class="gallery__img"
+                src="/images/img-02.jpg"
+                alt="Image 2"
+                loading="lazy"
+                width="300px"
+                decoding="async"
+              />
+            </div>
+            <div class="gallery__item">
+              <img
+                class="gallery__img"
+                src="/images/img-06.jpg"
+                alt="Image 2"
+                loading="lazy"
+                width="300px"
+                decoding="async"
+              />
+            </div>
+            <div class="gallery__item">
+              <img
+                class="gallery__img"
+                src="/images/img-04.jpg"
+                alt="Image 4"
+                loading="lazy"
+                width="300px"
+                decoding="async"
+              />
+            </div>
+            <div class="gallery__item">
+              <img
+                class="gallery__img"
+                src="/images/img-07.jpg"
+                alt="Image 7"
+                loading="lazy"
+                width="300px"
+                decoding="async"
+              />
+            </div>
+            <div class="gallery__item">
+              <img
+                class="gallery__img"
+                src="/images/img-08.jpg"
+                alt="Image 8"
+                loading="lazy"
+                width="300px"
+                decoding="async"
+              />
+            </div>
+            <div class="gallery__item">
+              <img
+                class="gallery__img"
+                src="/images/img-09.jpg"
+                alt="Image 9"
+                loading="lazy"
+                width="300px"
+                decoding="async"
+              />
+            </div>
+            <div class="gallery__item">
+              <img
+                class="gallery__img"
+                src="/images/img-10.jpg"
+                alt="Image 10"
+                loading="lazy"
+                width="300px"
+                decoding="async"
+              />
+            </div>
+            <div class="gallery__frame gallery__frame--small"></div>
+          </div>
+          <figure class="hero-quote">
+            <blockquote>
+              <p class="hero-quote__text">
+                “In stillness, we find the rhythm of everything.”
+              </p>
+            </blockquote>
+            <figcaption class="hero-quote__info">
+              <span class="hero-quote__name">— Aya Rahman</span>
+              <span class="hero-quote__origin">Mindful Living</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="impact" id="impact">
+        <h2>Our Way of Quiet Impact:</h2>
+        <div class="impact__content">
+          <div class="small-card">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"
+            >
+              <circle cx="12" cy="12" r="1" />
+              <circle cx="12" cy="5" r="1" />
+              <circle cx="12" cy="19" r="1" />
+            </svg>
+            <div class="small-card__info">
+              <span class="small-card__number">20</span>
+              <span class="small-card__text">documented success stories</span>
+            </div>
+          </div>
+          <div class="big-card">
+            <p>Quiet Impact</p>
+            <p>We’ve guided 1,200+ calm sessions</p>
+            <p>Helped 560 people rediscover daily mindfulness</p>
+            <p>Hosted 40 peaceful community events</p>
+          </div>
+
+          <figure class="quote-card">
+            <header class="quote-card__head">
+              <span class="quote-card__label">Quote</span>
+              <div class="quote-card__dots" aria-hidden="true">
+                <span class="quote-card__dot quote-card__dot--active"></span>
+                <span class="quote-card__dot"></span>
+                <span class="quote-card__dot"></span>
+              </div>
+            </header>
+            <blockquote class="quote-card__quote">
+              <p>
+                “Inner Peace helped me slow down, reflect, and build a mindful
+                rhythm into my days. Every visit feels like a quiet reset.”
+              </p>
+            </blockquote>
+
+            <figcaption class="quote-card__caption">
+              <img
+                src="/images/faces/face-4.jpg"
+                alt="Sarah Smith"
+                class="quote-card__avatar"
+                width="50px"
+              />
+              <div class="quote-card__info">
+                <span class="quote-card__name">Sarah Smith</span>
+                <span class="quote-card__role">Graphic Designer</span>
+              </div>
+              <a href="#" class="cta">Start your journey <span>→</span></a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="practice" id="practice">
+        <header class="practice__header">
+          <h2 class="practice__title">How the practice flows</h2>
+          <blockquote class="flow__quote">
+            <p>“Every breath is an invitation to return to yourself.”</p>
+            <cite>— Aya Rahman</cite>
+          </blockquote>
+        </header>
+
+        <div class="practice__content">
+          <!-- Primary item -->
+          <p class="practice__subtitle">
+            Find peace every day <br />
+            through simple mindful rituals.
+          </p>
+          <article class="practice__item practice__item--primary">
+            <figure class="practice__media">
+              <img
+                src="/images/practice/practice-1.jpg"
+                alt="Person practicing yoga in a calm space"
+              />
+            </figure>
+            <div class="practice__body">
+              <h3 class="practice__item-title">
+                A gentle pause to breathe <br />
+                and notice the present flows.
+              </h3>
+
+              <p class="practice__text">
+                Each practice starts with a moment of grounding — slow breath,
+                quiet mind — move with intention through the day.
+              </p>
+            </div>
+          </article>
+
+          <!-- Secondary item -->
+          <article class="practice__item practice__item--secondary">
+            <figure class="practice__media">
+              <img
+                src="/images/practice/practice-2.jpg"
+                alt="Woman meditating peacefully"
+              />
+            </figure>
+            <div class="practice__body">
+              <h3 class="practice__item-title">
+                Keep presence close,<br />from morning to night.
+              </h3>
+              <p class="practice__text">
+                Discover short rituals of real life — reflection, gratitude, and
+                mindful pauses — balance wherever you go.
+              </p>
+              <a class="practice__action" href="#"> Explore more </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
