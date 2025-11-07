@@ -90,9 +90,10 @@ a {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   align-items: stretch;
-
+  max-width: 180rem;
   gap: 1rem;
   margin: 0 auto;
+  margin-bottom: 8rem;
   padding: 2rem;
   min-height: calc(100dvh - 5em);
 
@@ -265,8 +266,8 @@ a {
 /* IMPACT */
 .impact {
   max-width: 140rem;
-  margin-top: 3rem;
   margin-inline: auto;
+  margin-bottom: 12rem;
 }
 
 
@@ -474,12 +475,13 @@ a {
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 /* PRACTICE */
 .practice {
-  max-width: 140rem;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: auto 1fr;
+  max-width: 140rem;
+  margin-inline: auto;
+  margin-block: 0 8rem;
   padding: 3rem;
-  margin-top: 12rem;
+
   /* border: rgba(97, 97, 97, 0.192) 1px solid; */
   border-radius: 2rem;
   position: relative;
@@ -490,24 +492,26 @@ a {
   position: absolute;
   content: "";
   z-index: -1;
+  top: 0;
   aspect-ratio: 1/1;
 
   border-radius: 10rem;
 }
 
 .practice::after {
-  width: 25%;
-  top: 10%;
+  width: max(30rem, 40%);
+
   right: 5%;
-  border: rgba(253, 165, 121, 0.089) 20px solid;
+  border: #fcf5f1 20px solid;
 }
 
 .practice::before {
-  width: 65%;
+  width: max(30rem, 50%);
   left: 10%;
-  top: -10%;
-  background-color: rgba(253, 165, 121, 0.089);
+
+  background-color: #fcf5f1;
   border-radius: 15rem;
+
 }
 
 .practice__header {
@@ -520,7 +524,7 @@ a {
 
 .flow__quote {
   color: #fcfbfb;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   font-weight: 600;
   background-color: #616161b2;
   padding: 2rem;
@@ -528,12 +532,11 @@ a {
 }
 
 .flow__quote cite {
-  font-size: smaller;
   color: #fda579;
 }
 
 .practice__title {
-  font-size: 3rem;
+  font-size: clamp(2rem, calc(1rem + 7vw), 3rem);
 }
 
 
@@ -547,7 +550,7 @@ a {
 
 .practice__subtitle {
   grid-column: 1/-1;
-  font-size: 5.2rem;
+  font-size: clamp(4rem, calc(1rem + 7vw), 5rem);
 }
 
 
@@ -578,7 +581,7 @@ a {
 }
 
 .practice__item--secondary img {
-  aspect-ratio: 3.5/4;
+  aspect-ratio: 4/3;
 }
 
 
@@ -604,9 +607,16 @@ a {
   font-size: 1.9rem;
   padding: 0.7rem 3rem;
   border-radius: 3rem;
-
+  margin-top: 10%;
 }
 
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* FOOTER */
+.site-footer {
+  height: 40dvh;
+  background: linear-gradient(180deg, #fcfbfb, #d6d6d6);
+  border-radius: 4rem;
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 /* QUERIES */
@@ -647,6 +657,19 @@ a {
 
   .quote-card {
     grid-column: 1/3;
+  }
+
+  /*PRACTICE  */
+  .practice {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .practice__header {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 2.5rem;
   }
 
 }
@@ -698,6 +721,11 @@ a {
     grid-template-columns: 1fr;
   }
 
+  /*PRACTICE  */
+  .flow__quote {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width : 736px) {
@@ -733,8 +761,21 @@ a {
     grid-column: span 2;
     grid-row: 3/-1;
   }
-}
 
+  /*PRACTICE  */
+  .practice__content {
+    grid-template-columns: 1fr;
+    gap: 3;
+  }
+
+  .practice__item--primary {
+    width: 100%;
+  }
+
+  .practice__item--secondary {
+    width: 100%;
+  }
+}
 
 
 /* 
