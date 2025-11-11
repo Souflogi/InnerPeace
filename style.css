@@ -591,6 +591,8 @@ a {
 /* STORIES */
 .stories {
   padding: 4rem 3rem;
+  border-top: rgb(97 97 97 /.19) solid 1px;
+  border-bottom: rgb(97 97 97 /.19) solid 1px;
 }
 
 .stories__header {
@@ -860,8 +862,11 @@ a {
   }
 
   .story__img {
-    aspect-ratio: 4/3.2;
+
+    aspect-ratio: 1/1;
   }
+
+
 
   /* this is what i added for tightening the story content spacing on tablets */
   .story__content {
