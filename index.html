@@ -9,6 +9,11 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
       rel="stylesheet"
     />
+    <!-- this is what i added for loading Swiper styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <link rel="stylesheet" href="style.css" />
     <title>Fancy CSS</title>
@@ -275,61 +280,143 @@
             work and life >
           </p>
         </header>
-        <div class="stories__list">
-          <article class="story">
-            <figure class="story__img">
-              <img
-                src="images/stories/story-1.jpg"
-                alt="Portrait of Amira Salim, founder of Luma Studio"
-              />
-            </figure>
+        <!-- this is what i added for the stories swiper container -->
+        <div class="stories__swiper swiper" data-swiper-stories>
+          <!-- this is what i added for the stories swiper wrapper -->
+          <div class="stories__list swiper-wrapper">
+            <!-- this is what i added for stories slide one -->
+            <div class="swiper-slide">
+              <article class="story">
+                <figure class="story__img">
+                  <img
+                    src="images/stories/story-1.jpg"
+                    alt="Portrait of Amira Salim, founder of Luma Studio"
+                  />
+                </figure>
 
-            <div class="story__content">
-              <p class="story__text">
-                “Practicing presence changed the way I lead my team. I stopped
-                trying to manage every moment — now, we move with intention and
-                breathe before we react.”
-              </p>
+                <div class="story__content">
+                  <p class="story__text">
+                    "Practicing presence changed the way I lead my team. I
+                    stopped trying to manage every moment&mdash;now we move with
+                    intention and breathe before we react."
+                  </p>
 
-              <footer class="story__footer">
-                <div class="story__author">
-                  <p class="story__name">Amira Salim</p>
-                  <p class="story__role">Creative Director</p>
+                  <footer class="story__footer">
+                    <div class="story__author">
+                      <p class="story__name">Amira Salim</p>
+                      <p class="story__role">Creative Director</p>
+                    </div>
+                    <div class="story__org">
+                      <p class="story__org-name">Luma Studio</p>
+                      <p class="story__org-number">18 employees</p>
+                    </div>
+                  </footer>
                 </div>
-                <div class="story__org">
-                  <p class="story__org-name">Luma Studio</p>
-                  <p class="story__org-number">18 employees</p>
-                </div>
-              </footer>
+              </article>
             </div>
-          </article>
-          <article class="story">
-            <figure class="story__img">
-              <img
-                src="images/stories/story-2.jpg"
-                alt="Portrait of Samir Haddad, founder of Northwind Architecture"
-              />
-            </figure>
+            <!-- this is what i added for stories slide two -->
+            <div class="swiper-slide">
+              <article class="story">
+                <figure class="story__img">
+                  <img
+                    src="images/stories/story-2.jpg"
+                    alt="Portrait of Samir Haddad, founder of Northwind Architecture"
+                  />
+                </figure>
 
-            <div class="story__content">
-              <p class="story__text">
-                “I used to fill every hour with noise and deadlines. The
-                practice of slowing down helped me rediscover space — not just
-                in my work, but in my thoughts too.”
-              </p>
+                <div class="story__content">
+                  <p class="story__text">
+                    "I used to fill every hour with noise and deadlines. The
+                    practice of slowing down helped me rediscover
+                    space&mdash;not just in my work, but in my thoughts too."
+                  </p>
 
-              <footer class="story__footer">
-                <div class="story__author">
-                  <p class="story__name">Samir Haddad</p>
-                  <p class="story__role">Founder & Principal Architect</p>
+                  <footer class="story__footer">
+                    <div class="story__author">
+                      <p class="story__name">Samir Haddad</p>
+                      <p class="story__role">Founder & Principal Architect</p>
+                    </div>
+                    <div class="story__org">
+                      <p class="story__org-name">Northwind Architecture</p>
+                      <p class="story__org-number">45 employees</p>
+                    </div>
+                  </footer>
                 </div>
-                <div class="story__org">
-                  <p class="story__org-name">Northwind Architecture</p>
-                  <p class="story__org-number">45 employees</p>
-                </div>
-              </footer>
+              </article>
             </div>
-          </article>
+            <!-- this is what i added for stories slide three -->
+            <div class="swiper-slide">
+              <article class="story">
+                <figure class="story__img">
+                  <img
+                    src="images/stories/story-3.png"
+                    alt="Portrait of Lian Torres, head of People at Atelier Twelve"
+                  />
+                </figure>
+
+                <div class="story__content">
+                  <p class="story__text">
+                    "Weekly breathwork circles quiet the office rush. Our team
+                    leaves energized, not exhausted, and collaboration finally
+                    feels playful."
+                  </p>
+
+                  <footer class="story__footer">
+                    <div class="story__author">
+                      <p class="story__name">Lian Torres</p>
+                      <p class="story__role">Head of People</p>
+                    </div>
+                    <div class="story__org">
+                      <p class="story__org-name">Atelier Twelve</p>
+                      <p class="story__org-number">32 employees</p>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+            </div>
+            <!-- this is what i added for stories slide four -->
+            <div class="swiper-slide">
+              <article class="story">
+                <figure class="story__img">
+                  <img
+                    src="images/stories/story-4.png"
+                    alt="Portrait of Marco Nguyen, wellness editor at Frame Magazine"
+                  />
+                </figure>
+
+                <div class="story__content">
+                  <p class="story__text">
+                    "Inner Peace became my reset button between deadlines. Ten
+                    mindful minutes before interviews keeps my curiosity soft
+                    and steady."
+                  </p>
+
+                  <footer class="story__footer">
+                    <div class="story__author">
+                      <p class="story__name">Marco Nguyen</p>
+                      <p class="story__role">Wellness Editor</p>
+                    </div>
+                    <div class="story__org">
+                      <p class="story__org-name">Frame Magazine</p>
+                      <p class="story__org-number">12 contributors</p>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- this is what i added for the stories swiper pagination -->
+          <div class="stories__pagination swiper-pagination"></div>
+          <!-- this is what i added for the stories swiper previous button -->
+          <div
+            class="stories__button stories__button--prev swiper-button-prev"
+            aria-label="View previous story"
+          ></div>
+          <!-- this is what i added for the stories swiper next button -->
+          <div
+            class="stories__button stories__button--next swiper-button-next"
+            aria-label="View next story"
+          ></div>
         </div>
       </section>
 
@@ -342,6 +429,8 @@
       <h1>footer</h1>
     </footer>
 
+    <!-- this is what i added for loading Swiper scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

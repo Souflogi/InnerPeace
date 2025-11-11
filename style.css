@@ -21,11 +21,11 @@ body {
   font-style: normal;
 }
 
-main > section {
+main>section {
   margin-block: clamp(6rem, 8vw, 10rem);
 }
 
-main > section:first-child {
+main>section:first-child {
   margin-top: 0;
 }
 
@@ -164,7 +164,7 @@ a {
   border: #fff solid 2px;
 }
 
-.hero__friends > img + img {
+.hero__friends>img+img {
   margin-left: -2rem;
 }
 
@@ -613,14 +613,60 @@ a {
   color: #fda579;
 }
 
+/* this is what i added for the stories swiper layout */
+.stories__swiper {
+  position: relative;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-block: 3rem 5rem;
+}
+
+/* this is what i added for ensuring the swiper wrapper spans full width */
 .stories__list {
+  width: 100%;
+}
+
+/* this is what i added for centering each swiper slide */
+.stories__swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* this is what i added for styling the swiper buttons */
+.stories__button {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: #fcfbfb;
+  border: 1px solid rgb(97 97 97 /0.2);
+  box-shadow: 0 1.2rem 2.4rem rgb(0 0 0 /0.08);
+}
+
+/* this is what i added for the icon look of swiper buttons */
+.stories__button::after {
+  font-size: 1.4rem;
+  color: #616161;
+  font-weight: 700;
+}
+
+/* this is what i added for the swiper pagination dots */
+.stories__pagination .swiper-pagination-bullet {
+  background-color: #d6d6d6;
+  opacity: 0.6;
+}
+
+/* this is what i added for the active swiper pagination dot */
+.stories__pagination .swiper-pagination-bullet-active {
+  background-color: #fda579;
+  opacity: 1;
 }
 
 .story {
   display: flex;
   align-items: center;
-  width: fit-content;
-  max-width: 60rem;
+  border: solid 1px rgb(97 97 97 /.22);
+  border-radius: 2rem;
 }
 
 .story__img {
@@ -786,6 +832,43 @@ a {
   /*PRACTICE  */
   .flow__quote {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  /* this is what i added for letting the stories swiper breathe on tablets */
+  .stories__swiper {
+    max-width: 100%;
+    padding: 2rem 1rem 5rem;
+  }
+
+  /* this is what i added for shrinking swiper slide padding on tablets */
+  .stories__swiper .swiper-slide {
+    padding: 1.5rem;
+  }
+
+  /* this is what i added for stacking each story vertically on tablets */
+  .story {
+    flex-direction: column;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  /* this is what i added for tightening the story content spacing on tablets */
+  .story__content {
+    padding: 3rem 2rem;
+  }
+
+  /* this is what i added for reflowing the story footer on tablets */
+  .story__footer {
+    justify-content: space-around;
+  }
+
+  /* this is what i added for resizing swiper buttons on tablets */
+  .stories__button {
+    width: 3.8rem;
+    height: 3.8rem;
   }
 }
 
