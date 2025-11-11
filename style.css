@@ -21,11 +21,11 @@ body {
   font-style: normal;
 }
 
-main>section {
+main > section {
   margin-block: clamp(6rem, 8vw, 10rem);
 }
 
-main>section:first-child {
+main > section:first-child {
   margin-top: 0;
 }
 
@@ -164,7 +164,7 @@ a {
   border: #fff solid 2px;
 }
 
-.hero__friends>img+img {
+.hero__friends > img + img {
   margin-left: -2rem;
 }
 
@@ -606,7 +606,6 @@ a {
 .stories__title {
   font-size: 5rem;
   margin-block: 1rem 2.5rem;
-
 }
 
 .stories__subtitle {
@@ -614,64 +613,8 @@ a {
   color: #fda579;
 }
 
-/* this is what i added for the shared stories carousel track */
 .stories__list {
-  display: flex;
-  justify-content: center;
-  width: min(90vw, 70rem);
-  transition: opacity 0.3s ease;
 }
-
-/* this is what i added for the stories carousel wrapper */
-.stories__carousel {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  justify-content: center;
-  margin-block: 4rem;
-  padding: 2rem;
-}
-
-/* this is what i added for the stories carousel track sizing */
-.stories__carousel-track {
-  position: relative;
-  min-height: 42rem;
-}
-
-/* this is what i added for the story sizing inside carousels */
-.stories__carousel-track .story {
-  width: min(90vw, 60rem);
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-/* this is what i added for the carousel control buttons */
-.stories__control {
-  border: 1px solid rgb(97 97 97 /.2);
-  background: #fcfbfb;
-  color: inherit;
-  width: 4.5rem;
-  height: 4.5rem;
-  border-radius: 50%;
-  font-size: 2.2rem;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* this is what i added for the carousel control hover state */
-.stories__control:hover,
-.stories__control:focus-visible {
-  background-color: #fda579;
-  color: #fcfbfb;
-}
-
-/* this is what i added for hiding inactive carousel slides */
-.story[data-carousel-slide][hidden] {
-  display: none;
-}
-
 
 .story {
   display: flex;
@@ -702,7 +645,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   padding: 5rem;
-
 }
 
 .story__text {
@@ -713,7 +655,7 @@ a {
 .story__footer {
   display: flex;
   gap: 5rem;
-  border-top: rgb(97 97 97 /.2) 1px solid;
+  border-top: rgb(97 97 97 /0.2) 1px solid;
   padding-top: 4rem;
 }
 
@@ -892,18 +834,6 @@ a {
 
   .practice__item--secondary {
     width: 100%;
-  }
-
-  /* this is what i added for stacking the stories carousel on small screens */
-  .stories__carousel {
-    flex-direction: column;
-  }
-
-  /* this is what i added for resizing the stories carousel controls on small screens */
-  .stories__control {
-    width: 100%;
-    max-width: 14rem;
-    border-radius: 1rem;
   }
 }
 
