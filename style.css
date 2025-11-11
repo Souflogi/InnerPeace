@@ -21,6 +21,14 @@ body {
   font-style: normal;
 }
 
+main>section {
+  margin-block: clamp(6rem, 8vw, 10rem);
+}
+
+main>section:first-child {
+  margin-top: 0;
+}
+
 ul,
 ol {
   list-style: none;
@@ -41,7 +49,6 @@ a {
   color: #616161;
   padding: 1.5rem 3rem 0 3rem;
 
-
   border-radius: 2rem;
 }
 
@@ -58,7 +65,7 @@ a {
 .site-header__nav-link {
   text-transform: capitalize;
   font-size: 2.2rem;
-  transition: all ease .3s;
+  transition: all ease 0.3s;
 }
 
 .site-header__nav-link:hover,
@@ -80,7 +87,6 @@ a {
   display: flex;
   align-items: center;
   text-transform: capitalize;
-
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
@@ -92,14 +98,11 @@ a {
   align-items: stretch;
   max-width: 180rem;
   gap: 1rem;
-  margin: 0 auto;
-  margin-bottom: 8rem;
+  margin-inline: auto;
   padding: 2rem;
   min-height: calc(100dvh - 5em);
 
-
   border-radius: 3em;
-
 }
 
 .hero__content {
@@ -136,14 +139,12 @@ a {
   color: #fda579;
 }
 
-
 .hero__content p {
   font-size: 2rem;
   text-align: center;
   line-height: 1.5;
   width: 60%;
 }
-
 
 .hero__friends {
   display: flex;
@@ -178,9 +179,10 @@ a {
   font-size: 2.8rem;
 }
 
-
 .hero__decor {
+  align-self: center;
   display: flex;
+  gap: 2.5rem;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -210,17 +212,14 @@ a {
 .gallery {
   column-count: 4;
   gap: 2rem;
-
 }
-
 
 .gallery__item {
   width: 15rem;
   overflow: hidden;
   cursor: pointer;
 
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2),
-    -8px -8px 8px #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2), -8px -8px 8px #fff;
 
   border-radius: 2rem;
   margin-top: 2rem;
@@ -246,8 +245,7 @@ a {
 .gallery__frame {
   width: 15rem;
   height: 30rem;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2),
-    -8px -8px 8px #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2), -8px -8px 8px #fff;
   background: linear-gradient(145deg, #fcfbfb, #d6d6d6);
   border-radius: 2rem;
   margin-top: 2rem;
@@ -261,24 +259,20 @@ a {
   height: 15rem;
 }
 
-
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 /* IMPACT */
 .impact {
   max-width: 140rem;
   margin-inline: auto;
-  margin-bottom: 12rem;
 }
-
 
 .impact h2 {
   font-size: clamp(3rem, calc(1.5vw + 0.9rem), 4rem);
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   color: #616161;
   /* background-color: rgba(255, 186, 152, 0.589); */
   width: 100%;
   padding: 2rem 3rem;
-  margin-bottom: 10rem;
   border-radius: 2rem;
 }
 
@@ -289,8 +283,6 @@ a {
   grid-auto-rows: auto;
   gap: 2rem;
 }
-
-
 
 .small-card {
   display: grid;
@@ -304,7 +296,6 @@ a {
   position: relative;
 }
 
-
 .small-card__info {
   display: flex;
   align-items: flex-end;
@@ -316,7 +307,7 @@ a {
 .small-card__number {
   backdrop-filter: blur(25px);
   border-radius: 0.2em;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .small-card__text {
@@ -332,7 +323,7 @@ a {
 .small-card svg {
   z-index: 44;
   color: #fda579;
-  opacity: .8;
+  opacity: 0.8;
   width: 8em;
   height: 6em;
 
@@ -357,7 +348,6 @@ a {
   border-radius: 2rem;
 }
 
-
 .big-card p {
   display: inline-block;
   height: min-content;
@@ -369,7 +359,6 @@ a {
   backdrop-filter: blur(35px);
   /* border: #ececec solid 2px; */
   border-radius: 1em;
-
 }
 
 .big-card p:nth-of-type(1) {
@@ -390,7 +379,7 @@ a {
   padding: 2.5rem 3.5rem;
   background-color: #616161;
   border-radius: 2rem;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .quote-card__head {
@@ -410,14 +399,14 @@ a {
 }
 
 .quote-card__dot {
-  height: .5rem;
+  height: 0.5rem;
   aspect-ratio: 1/1;
   border-radius: 20rem;
   background-color: #fda579;
 }
 
 .quote-card__dot--active {
-  aspect-ratio: 2/.6;
+  aspect-ratio: 2/0.6;
   background-color: #fff;
 }
 
@@ -441,7 +430,7 @@ a {
 .quote-card__info {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .quote-card__name {
@@ -468,10 +457,6 @@ a {
   aspect-ratio: 1/1;
 }
 
-
-
-
-
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 /* PRACTICE */
 .practice {
@@ -479,7 +464,6 @@ a {
   grid-template-columns: auto 1fr;
   max-width: 140rem;
   margin-inline: auto;
-  margin-block: 0 8rem;
   padding: 3rem;
 
   /* border: rgba(97, 97, 97, 0.192) 1px solid; */
@@ -511,7 +495,6 @@ a {
 
   background-color: #fcf5f1;
   border-radius: 15rem;
-
 }
 
 .practice__header {
@@ -519,7 +502,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .flow__quote {
@@ -539,7 +521,6 @@ a {
   font-size: clamp(2rem, calc(1rem + 7vw), 3rem);
 }
 
-
 .practice__content {
   justify-self: center;
   max-width: fit-content;
@@ -552,9 +533,6 @@ a {
   grid-column: 1/-1;
   font-size: clamp(4rem, calc(1rem + 7vw), 5rem);
 }
-
-
-
 
 .practice__media {
   border-radius: 2rem;
@@ -584,7 +562,6 @@ a {
   aspect-ratio: 4/3;
 }
 
-
 .practice__body {
   display: flex;
   flex-direction: column;
@@ -611,6 +588,147 @@ a {
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* STORIES */
+.stories {
+  padding: 4rem 3rem;
+}
+
+.stories__header {
+  text-align: center;
+}
+
+.stories__eyebrow {
+  font-size: 3.3rem;
+  color: #fda579;
+  font-weight: 700;
+}
+
+.stories__title {
+  font-size: 5rem;
+  margin-block: 1rem 2.5rem;
+
+}
+
+.stories__subtitle {
+  font-size: 2.7rem;
+  color: #fda579;
+}
+
+/* this is what i added for the shared stories carousel track */
+.stories__list {
+  display: flex;
+  justify-content: center;
+  width: min(90vw, 70rem);
+  transition: opacity 0.3s ease;
+}
+
+/* this is what i added for the stories carousel wrapper */
+.stories__carousel {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  margin-block: 4rem;
+  padding: 2rem;
+}
+
+/* this is what i added for the stories carousel track sizing */
+.stories__carousel-track {
+  position: relative;
+  min-height: 42rem;
+}
+
+/* this is what i added for the story sizing inside carousels */
+.stories__carousel-track .story {
+  width: min(90vw, 60rem);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* this is what i added for the carousel control buttons */
+.stories__control {
+  border: 1px solid rgb(97 97 97 /.2);
+  background: #fcfbfb;
+  color: inherit;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  font-size: 2.2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* this is what i added for the carousel control hover state */
+.stories__control:hover,
+.stories__control:focus-visible {
+  background-color: #fda579;
+  color: #fcfbfb;
+}
+
+/* this is what i added for hiding inactive carousel slides */
+.story[data-carousel-slide][hidden] {
+  display: none;
+}
+
+
+.story {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 60rem;
+}
+
+.story__img {
+  flex: 0 0 250px;
+  /* this controls how wide the image area is */
+  aspect-ratio: 3/ 4;
+
+  /* keeps layout stable */
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.story__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story__content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rem;
+
+}
+
+.story__text {
+  font-size: 2rem;
+  width: 40ch;
+}
+
+.story__footer {
+  display: flex;
+  gap: 5rem;
+  border-top: rgb(97 97 97 /.2) 1px solid;
+  padding-top: 4rem;
+}
+
+.story__name,
+.story__org-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.story__role,
+.story__org-number {
+  font-size: 1.8rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
 /* FOOTER */
 .site-footer {
   height: 40dvh;
@@ -618,9 +736,13 @@ a {
   border-radius: 4rem;
 }
 
+#contact {
+  padding: 4rem 3rem;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 /* QUERIES */
-@media screen and (max-width : 1200px) {
+@media screen and (max-width: 1200px) {
   body {
     padding: 1rem;
   }
@@ -671,10 +793,9 @@ a {
     width: 100%;
     margin-bottom: 2.5rem;
   }
-
 }
 
-@media screen and (max-width : 1000px) {
+@media screen and (max-width: 1000px) {
   body {
     padding: 0;
   }
@@ -683,7 +804,6 @@ a {
   .site-header__nav {
     display: none;
   }
-
 
   /* HERO */
   .hero {
@@ -725,10 +845,9 @@ a {
   .flow__quote {
     display: none;
   }
-
 }
 
-@media screen and (max-width : 736px) {
+@media screen and (max-width: 736px) {
   html {
     font-size: 56%;
   }
@@ -736,7 +855,6 @@ a {
   .gallery {
     column-count: 2;
   }
-
 
   /*IMPACT  */
   .impact__content {
@@ -775,8 +893,19 @@ a {
   .practice__item--secondary {
     width: 100%;
   }
-}
 
+  /* this is what i added for stacking the stories carousel on small screens */
+  .stories__carousel {
+    flex-direction: column;
+  }
+
+  /* this is what i added for resizing the stories carousel controls on small screens */
+  .stories__control {
+    width: 100%;
+    max-width: 14rem;
+    border-radius: 1rem;
+  }
+}
 
 /* 
 .media {
