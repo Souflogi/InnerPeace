@@ -836,6 +836,9 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .stories {
+    padding: 4rem 1rem;
+  }
 
   /* this is what i added for letting the stories swiper breathe on tablets */
   .stories__swiper {
