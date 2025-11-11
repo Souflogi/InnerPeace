@@ -696,12 +696,13 @@ a {
 .story__text {
   font-size: 2rem;
   width: 40ch;
+  margin-bottom: 1rem;
 }
 
 .story__footer {
   display: flex;
   gap: 5rem;
-  border-top: rgb(97 97 97 /0.2) 1px solid;
+  border-top: #fda579 1px solid;
   padding-top: 4rem;
 }
 
@@ -853,6 +854,11 @@ a {
     flex-direction: column;
     text-align: center;
     max-width: 100%;
+    padding: 2rem;
+  }
+
+  .story__img {
+    aspect-ratio: 4/3.2;
   }
 
   /* this is what i added for tightening the story content spacing on tablets */
