@@ -371,6 +371,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .gallery__item,
   [data-reveal] {
     opacity: 1;
@@ -1038,8 +1039,22 @@ body.nav-open {
 }
 
 @media screen and (max-width: 768px) {
+  .hero__decor {
+    width: 95%;
+
+  }
+
+  .impact {
+    width: 95%;
+    padding: 0;
+  }
+
   .stories {
     padding: 4rem 1rem;
+  }
+
+  .stories__title {
+    margin-block: 1rem;
   }
 
   /* this is what i added for letting the stories swiper breathe on tablets */
