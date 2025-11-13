@@ -8,6 +8,8 @@
 
 html {
   font-size: 62.5%;
+  scrollbar-width: thin;
+  scrollbar-color: #fda579 #fff6f0;
 }
 
 body {
@@ -19,6 +21,39 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+/* Match scrollbar + selection styling to the warm accent palette */
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+body::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+  background: #fff6f0;
+  border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #fdb98f, #fda579);
+  border-radius: 1rem;
+  border: 3px solid #fff6f0;
+  box-shadow: 0 4px 10px rgba(253, 165, 121, 0.35);
+}
+
+body::-webkit-scrollbar-thumb:hover,
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffb07c, #fd8b52);
+}
+
+::selection,
+::-moz-selection,
+*::selection,
+*::-moz-selection {
+  background-color: rgba(253, 165, 121, 0.8);
+  color: #fff;
 }
 
 main>section {
