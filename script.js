@@ -1,4 +1,4 @@
-// this is what i added for initializing the stories Swiper instance
+// Initialize interactive modules once the DOM is ready.
 document.addEventListener("DOMContentLoaded", () => {
   const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -36,17 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const initStories = () => {
     if (typeof Swiper === "undefined") return;
 
+    // Stories carousel configuration (looping, pagination, arrows).
     new Swiper("[data-swiper-stories]", {
       loop: true,
-      // this is what i added for controlling animation timing
       speed: 600,
       spaceBetween: 30,
-      // this is what i added for enabling pagination dots
       pagination: {
         el: ".stories__pagination",
         clickable: true,
       },
-      // this is what i added for enabling navigation arrows
       navigation: {
         nextEl: ".stories__button--next",
         prevEl: ".stories__button--prev",
@@ -59,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!galleryItems.length) return;
 
     const setDelay = (item, index) => {
-      // creates a subtle wave instead of a strict incremental delay
+      // Creates a subtle wave instead of a strict incremental delay.
       const cycle = 4;
       const delay = (index % cycle) * 140 + Math.floor(index / cycle) * 60;
       item.style.setProperty("--gallery-delay", `${delay}ms`);

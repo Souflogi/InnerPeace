@@ -736,7 +736,6 @@ a {
   color: #fda579;
 }
 
-/* this is what i added for the stories swiper layout */
 .stories__swiper {
   position: relative;
   max-width: 80rem;
@@ -744,19 +743,18 @@ a {
   padding-block: 3rem 5rem;
 }
 
-/* this is what i added for ensuring the swiper wrapper spans full width */
 .stories__list {
   width: 100%;
 }
 
-/* this is what i added for centering each swiper slide */
+/* Center each slide so the cards stay balanced */
 .stories__swiper .swiper-slide {
   display: flex;
   justify-content: center;
   padding: 2rem;
 }
 
-/* this is what i added for styling the swiper buttons */
+/* Slider arrow buttons */
 .stories__button {
   width: 4.5rem;
   height: 4.5rem;
@@ -766,49 +764,49 @@ a {
   box-shadow: 0 1.2rem 2.4rem rgb(0 0 0 /0.08);
 }
 
-/* this is what i added for the icon look of swiper buttons */
+/* Arrow glyph style provided by Swiper pseudo-element */
 .stories__button::after {
   font-size: 1.4rem;
   color: #616161;
   font-weight: 700;
 }
 
-/* this is what i added for the swiper pagination dots */
+/* Pagination dots */
 .stories__pagination .swiper-pagination-bullet {
   background-color: #d6d6d6;
   opacity: 0.6;
 }
 
-/* this is what i added for the active swiper pagination dot */
+/* Active pagination state */
 .stories__pagination .swiper-pagination-bullet-active {
   background-color: #fda579;
   opacity: 1;
 }
 
-.story {
+.stories__card {
   display: flex;
   align-items: center;
   border: solid 1px rgb(97 97 97 /.22);
   border-radius: 2rem;
 }
 
-.story__img {
+.stories__card-media {
   flex: 0 0 250px;
-  /* this controls how wide the image area is */
+  /* Define how wide the portrait sits */
   aspect-ratio: 3/ 4;
 
-  /* keeps layout stable */
+  /* Keeps layout stable */
   overflow: hidden;
   border-radius: 2rem;
 }
 
-.story__img img {
+.stories__card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.story__content {
+.stories__card-content {
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -816,26 +814,26 @@ a {
   padding: 5rem;
 }
 
-.story__text {
+.stories__card-text {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.story__footer {
+.stories__card-footer {
   display: flex;
   gap: 5rem;
   border-top: #fda579 1px solid;
   padding-top: 4rem;
 }
 
-.story__name,
-.story__org-name {
+.stories__card-name,
+.stories__card-org-name {
   font-size: 1.8rem;
   font-weight: 700;
 }
 
-.story__role,
-.story__org-number {
+.stories__card-role,
+.stories__card-org-number {
   font-size: 1.8rem;
 }
 
@@ -1253,43 +1251,37 @@ body.nav-open {
     margin-block: 1rem;
   }
 
-  /* this is what i added for letting the stories swiper breathe on tablets */
   .stories__swiper {
     max-width: 100%;
     padding: 2rem 1rem 5rem;
   }
 
-  /* this is what i added for shrinking swiper slide padding on tablets */
   .stories__swiper .swiper-slide {
     padding: 1.5rem;
   }
 
-  /* this is what i added for stacking each story vertically on tablets */
-  .story {
+  .stories__card {
     flex-direction: column;
     text-align: center;
     max-width: 100%;
     padding: 2rem;
   }
 
-  .story__img {
+  .stories__card-media {
 
     aspect-ratio: 1/1;
   }
 
 
 
-  /* this is what i added for tightening the story content spacing on tablets */
-  .story__content {
+  .stories__card-content {
     padding: 3rem 2rem;
   }
 
-  /* this is what i added for reflowing the story footer on tablets */
-  .story__footer {
+  .stories__card-footer {
     justify-content: space-around;
   }
 
-  /* this is what i added for resizing swiper buttons on tablets */
   .stories__button {
     width: 3.8rem;
     height: 3.8rem;
