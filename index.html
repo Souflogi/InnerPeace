@@ -23,7 +23,21 @@
       <div class="site-header__logo">
         <img src="./images/logo-dark.png" width="70px" alt="" />
       </div>
-      <nav class="site-header__nav">
+      <button
+        class="site-header__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        data-nav-toggle
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="site-header__toggle-bars" aria-hidden="true">
+          <span class="site-header__toggle-line"></span>
+          <span class="site-header__toggle-line"></span>
+          <span class="site-header__toggle-line"></span>
+        </span>
+      </button>
+      <nav class="site-header__nav" id="primary-navigation" data-nav>
         <ul class="site-header__nav-list">
           <li class="site-header__nav-item">
             <a class="site-header__nav-link" href="#home">Presence</a>
@@ -38,8 +52,9 @@
             <a class="site-header__nav-link" href="#stories">stories</a>
           </li>
         </ul>
+        <a href="#contact" class="site-header__cta">Say Hello</a>
       </nav>
-      <a href="#contact" class="site-header__cta">Say Hello</a>
+      <div class="site-header__backdrop" data-nav-backdrop aria-hidden="true"></div>
     </header>
     <main>
       <section id="home" class="hero">

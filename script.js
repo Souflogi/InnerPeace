@@ -2,6 +2,37 @@
 document.addEventListener("DOMContentLoaded", () => {
   const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+  const initResponsiveMenu = () => {
+    const toggle = document.querySelector("[data-nav-toggle]");
+    const nav = document.querySelector("[data-nav]");
+    if (!toggle || !nav) return;
+
+    const backdrop = document.querySelector("[data-nav-backdrop]");
+    const navLinks = nav.querySelectorAll("a");
+    const setOpen = (isOpen) => {
+      nav.classList.toggle("is-open", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      document.body.classList.toggle("nav-open", isOpen);
+      backdrop?.classList.toggle("is-visible", isOpen);
+    };
+
+    toggle.addEventListener("click", () => {
+      const nextState = !nav.classList.contains("is-open");
+      setOpen(nextState);
+    });
+
+    backdrop?.addEventListener("click", () => setOpen(false));
+    navLinks.forEach((link) =>
+      link.addEventListener("click", () => setOpen(false))
+    );
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        setOpen(false);
+      }
+    });
+  };
+
   const initStories = () => {
     if (typeof Swiper === "undefined") return;
 
@@ -109,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  initResponsiveMenu();
   initStories();
   initGalleryReveal();
   initScrollReveal();
