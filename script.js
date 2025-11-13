@@ -23,7 +23,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     backdrop?.addEventListener("click", () => setOpen(false));
     navLinks.forEach((link) =>
-      link.addEventListener("click", () => setOpen(false))
+      link.addEventListener("click", (event) => {
+        const targetId = link.getAttribute("href");
+        const isAnchorLink = targetId && targetId.startsWith("#");
+        const targetSection = isAnchorLink ? document.querySelector(targetId) : null;
+
+        if (targetSection) {
+          event.preventDefault();
+          targetSection.scrollIntoView({
+            behavior: reduceMotionQuery.matches ? "auto" : "smooth",
+            block: "start",
+          });
+
+          if (typeof window.history.pushState === "function") {
+            window.history.pushState(null, "", targetId);
+          } else {
+            window.location.hash = targetId;
+          }
+        }
+
+        setOpen(false);
+      })
     );
 
     window.addEventListener("keydown", (event) => {
