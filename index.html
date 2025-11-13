@@ -147,9 +147,9 @@
         </div>
       </section>
       <section class="impact" id="impact">
-        <h2>Our Way of Quiet Impact:</h2>
+        <h2 data-reveal="up">Our Way of Quiet Impact:</h2>
         <div class="impact__content">
-          <div class="small-card">
+          <div class="small-card" data-reveal="left" data-reveal-delay="100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -171,14 +171,14 @@
               <span class="small-card__text">documented success stories</span>
             </div>
           </div>
-          <div class="big-card">
+          <div class="big-card" data-reveal="up" data-reveal-delay="200">
             <p>Quiet Impact</p>
             <p>We’ve guided 1,200+ calm sessions</p>
             <p>Helped 560 people rediscover daily mindfulness</p>
             <p>Hosted 40 peaceful community events</p>
           </div>
 
-          <figure class="quote-card">
+          <figure class="quote-card" data-reveal="right" data-reveal-delay="300">
             <header class="quote-card__head">
               <span class="quote-card__label">From the team</span>
               <div class="quote-card__dots" aria-hidden="true">
@@ -211,7 +211,7 @@
         </div>
       </section>
       <section class="practice" id="practice">
-        <header class="practice__header">
+        <header class="practice__header" data-reveal="up">
           <h2 class="practice__title">How the practice flows</h2>
           <blockquote class="flow__quote">
             <p>“Every breath is an invitation to return to yourself.”</p>
@@ -221,11 +221,15 @@
 
         <div class="practice__content">
           <!-- Primary item -->
-          <p class="practice__subtitle">
+          <p class="practice__subtitle" data-reveal="fade" data-reveal-delay="50">
             Find peace every day <br />
             through simple mindful rituals.
           </p>
-          <article class="practice__item practice__item--primary">
+          <article
+            class="practice__item practice__item--primary"
+            data-reveal="left"
+            data-reveal-delay="120"
+          >
             <figure class="practice__media">
               <img
                 src="./images/practice/practice-1.jpg"
@@ -246,7 +250,11 @@
           </article>
 
           <!-- Secondary item -->
-          <article class="practice__item practice__item--secondary">
+          <article
+            class="practice__item practice__item--secondary"
+            data-reveal="right"
+            data-reveal-delay="220"
+          >
             <figure class="practice__media">
               <img
                 src="./images/practice/practice-2.jpg"
@@ -270,7 +278,7 @@
       <!-- ------------------------------------------------------ -->
 
       <section id="stories" class="stories" aria-labelledby="stories-title">
-        <header class="stories__header">
+        <header class="stories__header" data-reveal="up">
           <p class="stories__eyebrow">Stories</p>
           <h2 id="stories-title" class="stories__title">
             Why mindful people love Inner Peace
@@ -281,7 +289,12 @@
           </p>
         </header>
         <!-- this is what i added for the stories swiper container -->
-        <div class="stories__swiper swiper" data-swiper-stories>
+        <div
+          class="stories__swiper swiper"
+          data-swiper-stories
+          data-reveal="up"
+          data-reveal-delay="120"
+        >
           <!-- this is what i added for the stories swiper wrapper -->
           <div class="stories__list swiper-wrapper">
             <!-- this is what i added for stories slide one -->
@@ -421,11 +434,11 @@
       </section>
 
       <!-- ------------------------------------------------------------ -->
-      <section id="contact" class="">
+      <section id="contact" class="" data-reveal="up">
         <h1>Form</h1>
       </section>
     </main>
-    <footer class="site-footer">
+    <footer class="site-footer" data-reveal="fade">
       <h1>footer</h1>
     </footer>
 
