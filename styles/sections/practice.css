@@ -1,0 +1,154 @@
+.practice {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  max-width: 140rem;
+  margin-inline: auto;
+  padding: 3rem;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.practice::after,
+.practice::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 0;
+  aspect-ratio: 1/1;
+  border-radius: 10rem;
+}
+
+.practice::after {
+  width: max(30rem, 40%);
+  right: 5%;
+  border: #fcf5f1 20px solid;
+}
+
+.practice::before {
+  width: max(30rem, 50%);
+  left: 10%;
+  background-color: #fcf5f1;
+  border-radius: 15rem;
+}
+
+.practice__header {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flow__quote {
+  color: #fcfbfb;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #616161b2;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.flow__quote cite {
+  color: #fda579;
+}
+
+.practice__title {
+  font-size: clamp(2rem, calc(1rem + 7vw), 3rem);
+}
+
+.practice__content {
+  justify-self: center;
+  max-width: fit-content;
+  display: grid;
+  gap: 6rem;
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.practice__subtitle {
+  grid-column: 1/-1;
+  font-size: clamp(4rem, calc(1rem + 7vw), 5rem);
+}
+
+.practice__media {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.practice__media img {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  border-radius: 2rem;
+}
+
+.practice__item--primary {
+  width: 34rem;
+}
+
+.practice__item--primary img {
+  aspect-ratio: 4/4;
+}
+
+.practice__item--secondary {
+  width: 25rem;
+}
+
+.practice__item--secondary img {
+  aspect-ratio: 4/3;
+}
+
+.practice__body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+.practice__item-title {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+
+.practice__text {
+  font-size: 1.8rem;
+}
+
+.practice__action {
+  color: #fcfbfb;
+  background-color: #fda579;
+  font-size: 1.9rem;
+  padding: 0.7rem 3rem;
+  border-radius: 3rem;
+  margin-top: 10%;
+}
+
+@media screen and (max-width: 1200px) {
+  .practice {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .practice__header {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .flow__quote {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .practice__content {
+    grid-template-columns: 1fr;
+    gap: 3;
+  }
+
+  .practice__item--primary,
+  .practice__item--secondary {
+    width: 100%;
+  }
+}

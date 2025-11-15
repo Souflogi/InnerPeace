@@ -1,0 +1,150 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: stretch;
+  max-width: 180rem;
+  gap: 1rem;
+  margin-inline: auto;
+  padding: 2rem;
+  min-height: calc(100dvh - 5em);
+
+  border-radius: 3em;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fcfbfb;
+  width: 90%;
+  height: 100%;
+  border-radius: 2em;
+
+  padding-inline: min(2em, 8%);
+  padding-block: 2rem;
+}
+
+.hero__content h1 {
+  display: inline-block;
+  width: fit-content;
+  margin-inline: auto;
+
+  padding: 1em;
+  border-radius: 2em;
+  text-align: center;
+  font-size: clamp(4rem, calc(2.5vw + 1rem), 6rem);
+  font-weight: 300;
+}
+
+.hero__content h1 span {
+  color: #fda579;
+}
+
+.hero__content p {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.5;
+  width: 60%;
+}
+
+.hero__friends {
+  display: flex;
+  align-items: center;
+  background-color: rgba(253, 165, 121, 0.205);
+  border-radius: 100rem;
+  opacity: 0.9;
+  width: max(250px, 20%);
+  margin-top: 6rem;
+  padding-inline: 0.5rem;
+}
+
+.hero__friends img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 14rem;
+  border: #fff solid 2px;
+}
+
+.hero__friends > img + img {
+  margin-left: -2rem;
+}
+
+.hero__friends p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.hero__friends p span {
+  display: block;
+  line-height: 1;
+  font-size: 2.8rem;
+}
+
+.hero__decor {
+  align-self: center;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #ececec;
+  background: linear-gradient(145deg, #fcfbfb, #d6d6d6);
+  padding: 5rem;
+  border-radius: 2rem;
+}
+
+.hero-quote__text {
+  font-size: 2.8rem;
+}
+
+.hero-quote__name {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-quote__origin {
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero__content {
+    padding: 0;
+  }
+
+  .hero-quote {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0;
+  }
+
+  .hero__content {
+    background-color: transparent;
+  }
+
+  .hero__content p {
+    width: 100%;
+  }
+
+  .hero__decor {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__decor {
+    width: 95%;
+  }
+}

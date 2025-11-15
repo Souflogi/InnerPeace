@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scrollbar-width: thin;
+  scrollbar-color: #fda579 #fff6f0;
+}
+
+:root {
+  --site-header-sticky-gap: 1.5rem;
+}
+
+body {
+  margin: 0;
+  color: #616161;
+  padding: 0 1.5em 1.5em 1.5em;
+
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Match scrollbar + selection styling to the warm accent palette */
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+body::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+  background: #fff6f0;
+  border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #fdb98f, #fda579);
+  border-radius: 1rem;
+  border: 3px solid #fff6f0;
+  box-shadow: 0 4px 10px rgba(253, 165, 121, 0.35);
+}
+
+body::-webkit-scrollbar-thumb:hover,
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffb07c, #fd8b52);
+}
+
+::selection,
+::-moz-selection,
+*::selection,
+*::-moz-selection {
+  background-color: rgba(253, 165, 121, 0.8);
+  color: #fff;
+}
+
+main > section {
+  margin-block: clamp(6rem, 8vw, 10rem);
+}
+
+main > section:first-child {
+  margin-top: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  html {
+    font-size: 56%;
+  }
+}

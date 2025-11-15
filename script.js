@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+  // Handles the responsive header nav (open/close, smooth scroll, backdrop).
   const initResponsiveMenu = () => {
     const toggle = document.querySelector("[data-nav-toggle]");
     const nav = document.querySelector("[data-nav]");
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // Configures the Swiper carousel used in the Stories section.
   const initStories = () => {
     if (typeof Swiper === "undefined") return;
 
@@ -72,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // Lazily reveals gallery tiles while respecting reduced-motion settings.
   const initGalleryReveal = () => {
     const galleryItems = document.querySelectorAll(".gallery__item");
     if (!galleryItems.length) return;
@@ -118,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // Re-usable reveal animation hooks for any element with data-reveal attrs.
   const initScrollReveal = () => {
     const revealTargets = document.querySelectorAll("[data-reveal]");
     if (!revealTargets.length) return;
@@ -158,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // Keeps the header sticky on desktop after the hero scrolls out of view.
   const initStickyNav = () => {
     const headerEl = document.querySelector(".site-header");
     const heroSection = document.querySelector(".section-hero");
@@ -204,6 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  // Pins the hamburger button on mobile when the hero leaves the viewport.
   const initStickyHamburger = () => {
     const toggle = document.querySelector("[data-nav-toggle]");
     const heroSection = document.querySelector(".section-hero");

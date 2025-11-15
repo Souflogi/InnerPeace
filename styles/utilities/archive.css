@@ -1,0 +1,43 @@
+/* 
+.media {
+  overflow: hidden;
+  padding: 1rem;
+  
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05), -8px -8px 8px #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all ease 0.45s;
+  }
+  
+  .media:hover {
+    box-shadow: none;
+    transform: scale(0.98);
+    }
+
+.media img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  display: block;
+  border-radius: 1em;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0 0 2rem 0;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 0.51rem 2rem;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border: 5px solid transparent;
+  border-image: linear-gradient(to right, #ffbb98, #fbe0c3) 1;
+  }
+  /* width + style + base */
