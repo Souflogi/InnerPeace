@@ -158,8 +158,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const initStickyNav = () => {
+    const headerEl = document.querySelector(".site-header");
+    const heroSection = document.querySelector(".section-hero");
+    if (!headerEl || !heroSection || typeof IntersectionObserver === "undefined") return;
+
+    const desktopQuery = window.matchMedia("(min-width: 1001px)");
+    let navObserver = null;
+
+    const NavObsererCallback = (entries) => {
+      const [entry] = entries;
+
+      if (!entry.isIntersecting) {
+        entry.target.style.marginTop = `${headerEl.offsetHeight}px`;
+        headerEl.classList.add("sticky-header");
+      } else {
+        headerEl.classList.remove("sticky-header");
+        entry.target.style.marginTop = "0px";
+      }
+    };
+
+    const NavObsererOptions = {
+      root: null,
+      threshold: [0],
+    };
+
+    const detachObserver = () => {
+      navObserver?.disconnect();
+      navObserver = null;
+      headerEl.classList.remove("sticky-header");
+      heroSection.style.marginTop = "0px";
+    };
+
+    const attachObserver = () => {
+      if (navObserver || !desktopQuery.matches) return;
+      navObserver = new IntersectionObserver(NavObsererCallback, NavObsererOptions);
+      navObserver.observe(heroSection);
+    };
+
+    attachObserver();
+
+    desktopQuery.addEventListener("change", () => {
+      detachObserver();
+      attachObserver();
+    });
+  };
+
   initResponsiveMenu();
   initStories();
   initGalleryReveal();
   initScrollReveal();
+  initStickyNav();
 });
