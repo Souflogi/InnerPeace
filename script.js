@@ -204,9 +204,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const initStickyHamburger = () => {
+    const toggle = document.querySelector("[data-nav-toggle]");
+    const heroSection = document.querySelector(".section-hero");
+    if (!toggle || !heroSection || typeof IntersectionObserver === "undefined") return;
+
+    const mobileQuery = window.matchMedia("(max-width: 1000px)");
+
+    const applyStickyState = (shouldStick) => {
+      const enableSticky = shouldStick && mobileQuery.matches;
+      toggle.classList.toggle("is-sticky", enableSticky);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        applyStickyState(!entry.isIntersecting);
+      },
+      { threshold: [0] }
+    );
+
+    observer.observe(heroSection);
+
+    mobileQuery.addEventListener("change", () => {
+      if (!mobileQuery.matches) {
+        toggle.classList.remove("is-sticky");
+      }
+    });
+  };
+
   initResponsiveMenu();
   initStories();
   initGalleryReveal();
   initScrollReveal();
   initStickyNav();
+  initStickyHamburger();
 });
